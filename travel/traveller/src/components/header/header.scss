@@ -1,0 +1,120 @@
+
+.container {
+    border-bottom: 2px solid black;
+    
+}
+.bottomMenu .bottomMenuTop .contact ul  {
+    display: flex;
+
+    li {
+        margin-right: 20px;
+        list-style: none;
+    }
+
+    li .link{
+        text-decoration: none;
+        color: #010f1c;
+    }
+    li .link:hover{
+        
+        color: #0989ff;
+    }
+}
+.topMenu {
+   display: flex;
+   justify-content: space-between;
+   margin: 40px;
+   align-items: center;
+   background-color: white;
+  
+  
+
+}
+.logo {
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+}
+.logoTitle{
+    font-size: 20px;
+
+}
+.centerMenu {
+    display: flex;
+    align-items: center;
+}
+.home .topMenu .centerMenu .searchBox{
+    height: 40px;
+    width: 300px;
+    border: 3px solid rgb(2, 137, 209);
+    color: white;
+    outline: none;
+    padding: 10px 30px;
+
+}
+.home .topMenu .centerMenu .search{
+    height: 40px;
+    border: 3px solid rgb(2, 137, 209);
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(2, 137, 209);
+    color: white;
+    outline: none;
+    padding: 10px 30px;
+  
+}
+.leftMenu {
+    display: flex;
+    align-items: center;
+
+}
+.bottomMenu{
+   
+    display: flex;
+    flex-direction: column;
+
+    .bottomMenuTop {
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: rgba(0 ,0 ,0 ,0.35) 0px 5px 15px;
+       
+    }
+    
+}
+.rightButton .rightBtn{
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.personIcon {
+    display: flex;
+    margin-right: 20px;
+}
+.rightMenu {
+    display: flex;
+    
+}
+.favoriteBtn {
+    margin-right:10px;
+    color: rgb(2, 137, 209);
+}
+.menuItem {
+    margin-right: 30px;
+}
+.bottomMenu .bottomMenuTop .auth {
+    margin-right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+
+    button{
+        margin-right: 20px;
+        font-size: 22px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background: none;
+    }
+
+}

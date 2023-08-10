@@ -1,0 +1,68 @@
+.rightbarWrapper {
+    padding: 0px 20px 0px 20px;
+}
+
+.birthdayContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+.birthdayText {
+    font-weight: 300;
+    font-size: 15px;
+  }
+  
+.rightbarTitle {
+    margin: 35px 0px 10px 35px;
+}
+.birthdayImg {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.topUserInfo {
+    margin-top: 20px;
+}
+
+.rowTitle {
+    font-weight: 350px;
+}
+
+.userFriends {
+    margin-top: 40px;
+ 
+}
+.userInformation {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    padding: 15px;
+}
+.userInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+.userInfoItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px 0px 0px;
+}
+.imgInfo {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 5px;
+
+    
+}
+
+

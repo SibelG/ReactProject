@@ -1,0 +1,30 @@
+.watch {
+    display: flex;
+    flex-direction: column;
+   
+    
+
+    .back {
+        display: flex;
+        justify-content: start;
+        margin-left: 70px;
+        margin-top: 30px;
+
+
+        .backBtn {
+            margin-right: 5px;
+        }
+    }
+
+    .videoDiv {
+        display: flex;
+        justify-content: center;
+    }
+    video{
+       
+        align-items: center;
+        width: 90%;
+        margin: 50px;
+        overflow: hidden;
+    }
+}
