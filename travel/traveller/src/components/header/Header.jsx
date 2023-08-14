@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import './header.scss'
 import {Link} from "react-router-dom"
 
@@ -9,12 +9,32 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import PersonIcon from '@mui/icons-material/Person';
 import LoginIcon from '@mui/icons-material/Login';
 import { useAuth0 } from "@auth0/auth0-react";
+import { ProductDetail } from '../../ProductDetail';
 
 
-export default function Home() {
+export default function Header({searchbtn}) {
+    const [search, setSearch] = useState()
+   
+    const [searchedArray, setSearchedArray] = React.useState("")
+ 
+    const searchBtn = () => {
+    if(searchbtn.length === 0){
+      setSearchedArray(ProductDetail)
+    } else {
+      const searchedObjects = []
+      ProductDetail.forEach((singleObject, index) => {
+        Object.values(singleObject).every((onlyValues, valIndex) => {
+          if(onlyValues.toLowerCase().includes(searchbtn.toLowerCase())){
+            searchedObjects.push(singleObject)
+            return;
+          }
+        })
+      })
+      setSearchedArray(searchedObjects) 
+    }
+  }
 
-
-  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
+    const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
   return (
     <div className='home'>
@@ -26,8 +46,8 @@ export default function Home() {
                
             </div>
             <div className='centerMenu'>
-            <input className="searchBox" type='text' autoComplete='off' value="" placeholder='Search Your Product...'/>
-            <button className='search'>Search</button>
+            <input className="searchBox" type='text' value={search} placeholder='Search Your Product...' autoComplete='off' onChange={(e) => setSearch(e.target.value)}></input>
+                <button className='search' onClick={() => searchbtn (search)}>Search</button>
             </div>
             <div className='rightMenu'>
                 <div className='personIcon'>
@@ -40,7 +60,9 @@ export default function Home() {
                 </div>
             <div className='rightButton'>
                 <FavoriteBorderOutlinedIcon className='rightBtn' style={{ color: "rgb(2, 137, 209)" }} />
-                <ShoppingBasketOutlinedIcon className='rightBtn' style={{ color: "rgb(2, 137, 209)" }}/>
+                <Link to='/cart' className='emptycartbtn'>
+                    <ShoppingBasketOutlinedIcon className='rightBtn' style={{ color: "rgb(2, 137, 209)" }}/>
+               </Link>
             </div>
                 
 
